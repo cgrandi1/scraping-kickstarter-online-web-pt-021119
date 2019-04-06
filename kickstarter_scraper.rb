@@ -1,9 +1,6 @@
 require 'pry'
 require 'nokogiri'
 
-#File.read('fixtures/kickstarter.html')
-#kickstarter = Nokogiri::HTML(html) here
-
 # projects: kickstarter.css("li.project.grid_4")
 #title: project.css("h2.bbcard_name strong a").text
 # image link: project.css("div.project-thumbnail a img").attribute("src").value
@@ -12,13 +9,10 @@ require 'nokogiri'
 # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
 
 def create_project_hash
-  projects = {}
-
-  kickstarter.css("li.project.grid_4").each do |project|
-    title = project.css("h2.bbcard_name strong a").text
-    projects[title.to_sym] = {}
-  end
-
-  # return the projects hash
-  projects
+  
+File.read('fixtures/kickstarter.html')
+ 
+kickstarter = Nokogiri::HTML(html) here
+binding.pry 
 end
+create_project_hash
