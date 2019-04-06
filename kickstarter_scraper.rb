@@ -1,5 +1,15 @@
-# require libraries/modules here
+require 'nokogiri'
+#require 'open-uri'
+require 'pry'
+
+# title = project.css("h2.bbcard_name strong a").text
 
 def create_project_hash
-  # write your code here
-end
+
+  html = File.read('fixtures/kickstarter.html')
+
+  kickstarter = Nokogiri::HTML(html)
+
+binding.pry
+ end
+create_project_hash
