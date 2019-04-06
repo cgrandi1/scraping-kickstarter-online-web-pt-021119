@@ -9,10 +9,10 @@ require 'nokogiri'
 # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
 
 def create_project_hash
-  
+
 File.read('fixtures/kickstarter.html')
- 
+
 kickstarter = Nokogiri::HTML(html) here
-binding.pry 
+binding.pry
 end
 create_project_hash
